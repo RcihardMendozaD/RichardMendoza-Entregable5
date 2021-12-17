@@ -1,0 +1,54 @@
+<div class="container">
+  <h1>Ingresar Nueva pelicula</h1>
+  <div class="row">
+    <div class="col-sm-6">
+      <form class="row g-3 needs-validation" [formGroup]="pelisForm" >
+        <div class="col-md-12">
+          <label for="validationCustom01" class="form-label" >Nombres</label>
+          <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre de pelicula" formControlName="nombre"   required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label for="validationCustom02" class="form-label">Detalle</label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Detalle" formControlName="detalle"  required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label for="validationCustom02" class="form-label">Director</label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Director" formControlName="director"  required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label for="validationCustom02" class="form-label">Clasificación</label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Clasificacion" formControlName="clasificacion"  required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label for="validationCustom02" class="form-label">Colocar URL de imagen</label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Colocar URL de imagen" formControlName="imagen"  required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label for="validationCustom02" class="form-label">Valor en dolares</label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Valor en dolares" formControlName="costo"  required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+      </form>
+      <hr>
+      <button class="btn btn-primary" (click)="onCargarPeli()" [routerLink]="['/listaPeliculas']" routerLinkActive="router-link-active" >Agegar y Listar</button>
+    </div>
+  </div>
+</div>
+

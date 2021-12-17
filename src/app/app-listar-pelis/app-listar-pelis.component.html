@@ -1,0 +1,45 @@
+<div class="container" [hidden]="!cargarLista">
+  <div class="row">
+    <h1 class="text-center">PELICULAS</h1>
+    <div
+      class="card col-sm-3 m-2"
+      style="width: 18rem"
+      *ngFor="let peli of pelis | async"
+    >
+      <img
+        src="{{ peli.imagen }}"
+        class="card-img-top p-2"
+        alt="..."
+        width="auto"
+        height="200"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ peli.nombre }}</h5>
+        <p class="card-text" id="details">{{ peli.detalle }}</p>
+        <p class="card-text" id="costo">{{ peli.costo }}</p>
+
+      </div>
+    </div>
+    <div class="card col-sm-3 m-2" style="width: 18rem">
+      <button class="card-body btn btn-secondary m-2"  [routerLink]="['/verCarrito']" >
+        Agregar
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modulo para agregar pelicula</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body col-sm-12">
+        
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
